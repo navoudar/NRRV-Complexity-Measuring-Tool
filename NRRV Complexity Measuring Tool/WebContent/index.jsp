@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+<a href="Uploader.jsp">upload file</a>
 </body>
 </html>
