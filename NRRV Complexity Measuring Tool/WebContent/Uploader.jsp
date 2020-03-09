@@ -36,7 +36,7 @@
 	
 	<c:forEach var="line" items="${filenames}">
    <select>
-   <option><c:out value="${line}"/>"${line}"</option>
+   <option>${line}</option>
    <option>test</option>
    </select>
    </c:forEach>
