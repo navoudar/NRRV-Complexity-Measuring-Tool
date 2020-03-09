@@ -1,0 +1,9 @@
+CREATE TYPE student_t AS OBJECT(
+sno char(5),
+sname varchar(30),
+age NUMBER
+)
+
+CREATE TABLE students OF student_t
+/
+INSERT INTO students VALUES (student_t('IT01''Navod',24))/

@@ -10,7 +10,7 @@ public class FileModel {
 	}
 
 	public FileModel() {
-		
+		System.out.println("In model");
 	}
 
 	public String getFilename() {
@@ -18,6 +18,7 @@ public class FileModel {
 	}
 
 	public void setFilename(String filename) {
+		System.out.println("In model"+filename);
 		this.filename = filename;
 	}
 
