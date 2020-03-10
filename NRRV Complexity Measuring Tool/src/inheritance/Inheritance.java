@@ -14,7 +14,7 @@ public class Inheritance {
 		
 		System.out.println(Arrays.toString(temp2));
 		
-		if(temp2[3].contains("extends")) {
+		if(temp2[3].contains("extends") || temp2[3].contains("implements")) {
 			System.out.println(temp2[4]);
 		}
 		else
