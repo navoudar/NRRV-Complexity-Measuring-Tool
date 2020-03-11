@@ -2,7 +2,11 @@ package controller;
 import java.util.Arrays;
 
 import navod.KeywordAndReservedWord;
+
 import navod.SIzeController;
+
+import inheritance.Inheritance;
+
 public class MainController {
 
 	String Content[];
