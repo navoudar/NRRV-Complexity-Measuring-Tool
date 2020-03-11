@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,22 +26,35 @@ public class Uploader extends HttpServlet {
 	 List<String> temps = new ArrayList<String>();
 	ReadFileLineByLine readFileLineByLine = new ReadFileLineByLine();
 	MainController mc = new MainController();
+	Scanner scan ;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
+		
+		
+		
 		ServletFileUpload sf = new ServletFileUpload(new DiskFileItemFactory());
 		try {
 			List<FileItem> multifiles = sf.parseRequest(request);
-
+			
 			for (FileItem item : multifiles) {
-
+					
+			/*	File f = new File("C://Users/navod/git/repository/NRRV Complexity Measurig Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files/"
+						+ item.getName());
+				scan =  new Scanner(f);
+				
+				while(scan.hasNextLine()) {
+					System.out.println(scan.hasNext());
+				} */
+				
 				try {
 					int i =0;
 					item.write(new File(
 							"C://Users/Cool/git/NRRV-Complexity-Measuring-Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files/"
 									+ item.getName()));
 					list.add(item.getName());
+					
 					
 					temps.add(i, item.getString());
 					mc.getFileContent(readFileLineByLine.file("C://Users/Cool/git/NRRV-Complexity-Measuring-Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files/"
