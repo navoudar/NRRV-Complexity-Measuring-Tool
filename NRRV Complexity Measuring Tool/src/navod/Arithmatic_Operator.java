@@ -7,7 +7,7 @@ import java.util.regex.*;
 
 public class Arithmatic_Operator {
 	int Nop =0;
-	int empNop = 0;
+	int tempNop = 0;
 	List<Integer> valueAccordingtoLine = new ArrayList<>();
 	List<String> wordlist = new ArrayList<String>();
 	String word;
@@ -16,64 +16,36 @@ public class Arithmatic_Operator {
 		
 		wordlist = Arrays.asList(code);
 		
-	//	boolean b = Pattern.compile(".m").matcher("am").matches();
-	//	System.out.println(b);
-	/*	String data1 = "Today, java class is object oriented language";
-		String regex = "\\bclass\\b";
-		 
-		Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
-		Matcher matcher = pattern.matcher(data1);
-		while (matcher.find())
-		{
-		    System.out.print("Start index: " + matcher.start());
-		    System.out.print(" End index: " + matcher.end() + " ");
-		    System.out.println(matcher.group());
-		}
-		
-		*/
 		for(String s : code) {
 			word = s.toString().trim();
-			
+			tempNop= 0;
 			
 			String data1 = word;
-			String regex = "\\b++i\\b";
-			 
+			//String regex = "\\bstatic\\b";
+			//String regex = "[a-zA-Z0-9_]|\\+\\+|--|<<|>>|[=+<>^*]=|[\\[\\](){}.;,!<>+^%]";
+			//String regex = "\\+\\+"; 
+			String regex = "(\\+\\+|^\\+)"; 
+			System.out.println(word);
 			Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 			Matcher matcher = pattern.matcher(data1);
 			while (matcher.find())
 			{
+				
+				tempNop =1;
 			    System.out.print("Start index: " + matcher.start());
 			    System.out.print(" End index: " + matcher.end() + " ");
 			    System.out.println(matcher.group());
+			   
+			    Nop += tempNop;			   
+			    
 			}
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			//System.out.println(word);
-			
-			//test = Pattern.compile("[amn]").matcher(word.toString().trim()).matches();
-		//	System.out.println("boolean "+ test);
-			
-			if(Pattern.compile("\\bclass\\b").matcher(word).matches()) {
-			//	System.out.println("working");
-			}else {
-			//	System.out.println("Not working");
-			}
-			
+		    valueAccordingtoLine.add(tempNop);
+			 
+			 
 		}
 		
-		
-		
-		
+		System.out.println("value of the array"+valueAccordingtoLine);	
 		return Nop;
 	}
 	

@@ -16,6 +16,7 @@ int Nsl = 0;
 KeywordAndReservedWord keywordAndReservedWord;
 Identifiers identifiers;
 Operators operators;
+Arithmatic_Operator ao ;
 
 
 public int ComplexityDuetoSize(String[] code) {
@@ -23,10 +24,12 @@ public int ComplexityDuetoSize(String[] code) {
 		keywordAndReservedWord = new KeywordAndReservedWord();
 		identifiers = new Identifiers();
 		operators = new Operators();
+		ao = new Arithmatic_Operator();
 		
 		Nkw = keywordAndReservedWord.Complexity(code);
 		Nid = identifiers.Complexity(code);
-		Nop = operators.Complexity(code);
+		//Nop = operators.Complexity(code);
+		Nop = ao.Complexity(code);
 		
 		System.out.println("Nkw in size Controller"+ Nkw);
 		System.out.println("Nid in size Controller"+ Nid);
