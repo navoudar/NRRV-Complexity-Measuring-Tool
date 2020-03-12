@@ -237,7 +237,7 @@ int arraySize = 0;
 		
 		
 		
-		System.out.println("vaue of array"+valueAccordingtoLine);
+		//System.out.println("vaue of array"+valueAccordingtoLine);
 		
 		
 		return Nop;
