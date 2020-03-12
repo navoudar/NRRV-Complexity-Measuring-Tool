@@ -1,0 +1,24 @@
+public static void main(String[] args) throws IOException {
+
+    Scanner in = new Scanner(new File("test.txt"));
+    List<String> listwords = new ArrayList<>();
+
+
+while (in.hasNext()) {
+      listwords.addAll(Arrays.asList(in.nextLine().split(" ")));
+}
+
+
+    if(listwords.get(4) == null){
+        name = listwords.get(2);
+     }
+    else {
+        name = listwords.get(4);
+    }
+
+
+List<String[]> listwords = new ArrayList<>();
+
+while (in.hasNext()) {
+    listwords.add(in.nextLine().split(" "));
+}
