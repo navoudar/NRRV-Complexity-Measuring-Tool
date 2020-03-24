@@ -26,10 +26,10 @@ public class Inheritance {
 		
 		
 		int complexity[] = new int[code.length];
-		
+		String temp;
 		  for (String s : code) {
 			  
-			  String temp = code.toString();
+			  temp = code.toString();
 			
 			  
 		  }
