@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.regex.*;
 
-public class Arithmatic_Operator {
+public class Operator_Arithmatic {
 	int Nop =0;
 	int tempNop = 0;
 	List<Integer> valueAccordingtoLine = new ArrayList<>();
@@ -21,11 +21,9 @@ public class Arithmatic_Operator {
 			tempNop= 0;
 			
 			String data1 = word;
-			//String regex = "\\bstatic\\b";
-			//String regex = "[a-zA-Z0-9_]|\\+\\+|--|<<|>>|[=+<>^*]=|[\\[\\](){}.;,!<>+^%]";
-			//String regex = "\\+\\+"; 
+			
 			String regex = "(\\+\\+|^\\+)"; 
-			System.out.println(word);
+		//	System.out.println(word);
 			Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 			Matcher matcher = pattern.matcher(data1);
 			while (matcher.find())

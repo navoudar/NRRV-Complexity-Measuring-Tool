@@ -52,13 +52,13 @@ public class Uploader extends HttpServlet {
 				try {
 					int i =0;
 					item.write(new File(
-							"C://Users/Cool/git/NRRV-Complexity-Measuring-Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files/"
+							"C://Users/navod/git/repository/NRRV Complexity Measurig Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files"
 									+ item.getName()));
 					list.add(item.getName());
 					
 					
 					temps.add(i, item.getString());
-					mc.getFileContent(readFileLineByLine.file("C://Users/Cool/git/NRRV-Complexity-Measuring-Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files/"
+					mc.getFileContent(readFileLineByLine.file("C://Users/navod/git/repository/NRRV Complexity Measurig Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files"
 									+ item.getName()));
 					/*readFileLineByLine.file("C://Users/navod/git/repository/NRRV Complexity Measurig Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files/"
 									+ item.getName()); */
