@@ -1,6 +1,7 @@
 package inheritance;
 
-import navod.Arithmatic_Operator;
+import navod.Operator_Arithmatic;
+
 import navod.Identifiers;
 import navod.KeywordAndReservedWord;
 import navod.Operators;
