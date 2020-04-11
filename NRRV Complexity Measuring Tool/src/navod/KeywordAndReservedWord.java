@@ -116,7 +116,7 @@ public class KeywordAndReservedWord {
 			  
 		  }*/
 		//System.out.println("Nkw"+Nkw);
-		System.out.println("vaue of array"+valueAccordingtoLine);
+		System.out.println("value of the keyword array"+valueAccordingtoLine);
 		return Nkw;
 		
 		

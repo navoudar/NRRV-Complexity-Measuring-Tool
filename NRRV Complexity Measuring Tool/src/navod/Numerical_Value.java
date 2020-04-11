@@ -42,7 +42,7 @@ public class Numerical_Value {
 		
 	    valueAccordingtoLine.add(tempNnv);
 }
-	    System.out.println("value of the array"+valueAccordingtoLine);	
+	    System.out.println("value of the numerical value array"+valueAccordingtoLine);	
 		return Nnv; 
 	}
 
