@@ -22,7 +22,9 @@ public class Operator_Arithmatic {
 			
 			String data1 = word;
 			
-			String regex = "(\\+\\+|^\\+)"; 
+			String regex = "^\\+{2}$|^\\+$|^\\-{2}$|^\\-$|^\\/$|^\\%$|^\\*$"; 
+		//	String regex = "(^\\+{2}$)|(^\\+$)|(^\\-{2}$)|(^\\-$)|(^\\/$)|(^\\%$)|(^\\*$)"; 
+			//String regex = "(^\\+{2})";
 		//	System.out.println(word);
 			Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
 			Matcher matcher = pattern.matcher(data1);
@@ -43,7 +45,7 @@ public class Operator_Arithmatic {
 			 
 		}
 		
-		System.out.println("value of the array"+valueAccordingtoLine);	
+		System.out.println("value of the arithmatic operator array"+valueAccordingtoLine);	
 		return Nop;
 	}
 	
