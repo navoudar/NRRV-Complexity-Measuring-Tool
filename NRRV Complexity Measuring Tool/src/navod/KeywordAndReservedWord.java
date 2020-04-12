@@ -1,7 +1,8 @@
 package navod;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+
+
 import java.util.List;
 
 public class KeywordAndReservedWord {
@@ -15,10 +16,10 @@ public class KeywordAndReservedWord {
 	
 	public int Complexity(String[] code) {
 		
-		List codelist = Arrays.asList(code); 
-		String tempss = (String) codelist.get(0);
-		arraySize = codelist.size();
-		System.out.println("Array size"+ arraySize);
+	//	List codelist = Arrays.asList(code); 
+	//	String tempss = (String) codelist.get(0);
+	//	arraySize = codelist.size();
+	//	System.out.println("Array size"+ arraySize);
 		
 		
 		
