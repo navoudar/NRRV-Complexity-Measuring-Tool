@@ -8,9 +8,12 @@ import java.util.regex.*;
 public class Operator_Arithmatic {
 	int Nop =0;
 	int tempNop = 0;
+	int count = 0;
 	List<Integer> valueAccordingtoLine = new ArrayList<>();
 	List<String> wordlist = new ArrayList<String>();
+	String[] wordlist3;
 	String word;
+	String word2;
 	boolean test;
 	public int Complexity(String[] code) {
 		
@@ -20,29 +23,39 @@ public class Operator_Arithmatic {
 			word = s.toString().trim();
 			tempNop= 0;
 			
-			String data1 = word;
+			wordlist3 = s.split("\\s");
 			
-			String regex = "^\\+{2}$|^\\+$|^\\-{2}$|^\\-$|^\\/$|^\\%$|^\\*$"; 
-		//	String regex = "(^\\+{2}$)|(^\\+$)|(^\\-{2}$)|(^\\-$)|(^\\/$)|(^\\%$)|(^\\*$)"; 
-			//String regex = "(^\\+{2})";
-		//	System.out.println(word);
-			Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
-			Matcher matcher = pattern.matcher(data1);
-			while (matcher.find())
-			{
+				for(String w : wordlist3) {
 				
-				tempNop =1;
-			    System.out.print("Start index: " + matcher.start());
-			    System.out.print(" End index: " + matcher.end() + " ");
-			    System.out.println(matcher.group());
-			   
-			    Nop += tempNop;			   
-			    
-			}
+					word2 = w.toString().trim();
 			
-		    valueAccordingtoLine.add(tempNop);
-			 
-			 
+					tempNop = 1;
+					
+					String regex = "\\+[+]|\\+[=]|\\=[+]|\\+";
+					
+					Pattern pattern = Pattern.compile(regex, Pattern.CASE_INSENSITIVE);
+					Matcher matcher = pattern.matcher(word2);
+					while (matcher.find())
+					{
+						tempNop = 0;
+						if(matcher.group().startsWith("+")&& matcher.group().endsWith("=")) {
+							System.out.println(matcher.group()+"found +=");
+							tempNop = 0;
+						}else if(matcher.group().startsWith("=")&& matcher.group().endsWith("+")) {
+							System.out.println(matcher.group()+"found =+");
+							tempNop = 0;
+						}else if(matcher.group().startsWith("+")&& matcher.group().endsWith("+")) {
+							System.out.println(matcher.group()+"found ++ and +");
+							tempNop = 1;
+						}
+						
+						count+= tempNop;
+					}
+				
+				}
+			Nop += count;
+			valueAccordingtoLine.add(count);
+			count = 0;
 		}
 		
 		System.out.println("value of the arithmatic operator array"+valueAccordingtoLine);	
