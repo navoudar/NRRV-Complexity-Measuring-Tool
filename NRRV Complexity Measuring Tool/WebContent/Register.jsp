@@ -111,12 +111,12 @@
 					
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
-						<input class="input100" type="text" name="uname" placeholder="Username">
+						<input class="input100" type="text" name="uname" placeholder="Username" name="firstname" required>
 						<span class="focus-input100"></span>
 					</div>
                                          
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "valid emaile">
-						<input class="input100" type="text" name="emaile" placeholder="Emaile">
+						<input class="input100" type="text" name="emaile" placeholder="Emaile" name="emaile" required>
 						<span class="focus-input100"></span>
 					</div>
 					
