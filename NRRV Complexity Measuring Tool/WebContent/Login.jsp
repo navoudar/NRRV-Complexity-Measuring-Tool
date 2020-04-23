@@ -112,13 +112,13 @@
 					
                                          
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Username is required">
-						<input class="input100" type="text" name="uname" placeholder="Username">
+						<input class="input100" type="text" name="uname" placeholder="Username" name="name" required>
 						<span class="focus-input100"></span>
 					</div>
 					
 					
 					<div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
-						<input class="input100" type="password" name="password" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password" name="password" required>
 						<span class="focus-input100"></span>
 </div>
 					
