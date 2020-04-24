@@ -1,14 +1,13 @@
 package controller;
 import java.util.Arrays;
 
-import navod.KeywordAndReservedWord;
-
-import navod.SIzeController;
 import inheritance.DirectInheritance;
 import inheritance.IndirectInheritance;
 import inheritance.InheritController;
 import inheritance.Inheritance;
 import inheritance.com;
+import size.KeywordAndReservedWord;
+import size.SIzeController;
 
 public class MainController {
 
