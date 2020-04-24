@@ -59,7 +59,7 @@
               </a>
                 <a href="#menu1" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                <span class="hidden-sm-down">Files Management </span>
+                <span class="hidden-sm-down">Upload Files </span>
                 </a>
                 
                  <a href="#" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
@@ -93,6 +93,12 @@
                <a href="#" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                 <span class="hidden-sm-down">Control Structures</span>  
+               </a>
+               
+               <!--/collapsible side bar end -->
+               <a href="#" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
+               <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                <span class="hidden-sm-down">Final Output</span>  
                </a>
             </div>
           </div>     
