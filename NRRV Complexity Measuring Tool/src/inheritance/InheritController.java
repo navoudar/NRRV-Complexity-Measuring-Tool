@@ -1,10 +1,9 @@
 package inheritance;
 
-import navod.Operator_Arithmatic;
-
-import navod.Identifiers;
-import navod.KeywordAndReservedWord;
-import navod.Operators;
+import size.Identifiers;
+import size.KeywordAndReservedWord;
+import size.Operator_Arithmatic;
+import size.Operators;
 
 public class InheritController {
 	/*int Cs = 0;

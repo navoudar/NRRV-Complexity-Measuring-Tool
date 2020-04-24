@@ -1,4 +1,4 @@
-package navod;
+package size;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,7 +15,7 @@ public class Numerical_Value {
 	String word;
 	
 	
-	public int Complexity(String[] code) {
+	public List<Integer> Complexity(String[] code) {
 		
 		
 		wordlist = Arrays.asList(code);
@@ -42,8 +42,9 @@ public class Numerical_Value {
 		
 	    valueAccordingtoLine.add(tempNnv);
 }
+		valueAccordingtoLine.add(Nnv);
 	    System.out.println("value of the numerical value array"+valueAccordingtoLine);	
-		return Nnv; 
+		return valueAccordingtoLine; 
 	}
 
 	

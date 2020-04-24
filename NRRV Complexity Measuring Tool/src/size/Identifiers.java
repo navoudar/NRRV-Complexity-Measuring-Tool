@@ -1,4 +1,4 @@
-package navod;
+package size;
 
 import java.util.ArrayList;
 
@@ -18,7 +18,7 @@ public class Identifiers {
 	String word;
 	String word2;
 
-	public int Complexity(String[] code) {
+	public List<Integer> Complexity(String[] code) {
 
 // this is a unique part for separating words, form this below for loop we can get word by word and passed it to wordlist3 and also iterate line by line	
 		for (String s : code) {
@@ -250,9 +250,9 @@ public class Identifiers {
 			//System.out.println("....................................................................");
 			valueAccordingtoLine.add(count);
 		}
-
+		valueAccordingtoLine.add(Nid);
 		System.out.println("value of the identifier array" + valueAccordingtoLine);
-		return Nid;
+		return valueAccordingtoLine;
 
 	}
 

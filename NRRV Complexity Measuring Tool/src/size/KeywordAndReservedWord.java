@@ -1,4 +1,4 @@
-package navod;
+package size;
 
 import java.util.ArrayList;
 
@@ -14,7 +14,7 @@ public class KeywordAndReservedWord {
 	int tempNkw = 0;
 	
 	
-	public int Complexity(String[] code) {
+	public List<Integer> Complexity(String[] code) {
 		
 	//	List codelist = Arrays.asList(code); 
 	//	String tempss = (String) codelist.get(0);
@@ -103,22 +103,10 @@ public class KeywordAndReservedWord {
 		
 		}
 		
-		/*if(tempss.contains("class")) {
-			System.out.println("in the block , yeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee");
-		}
 		
-		
-		int complexity[] = new int[code.length];
-		
-		  for (String s : code) {
-			  
-			  String temp = code.toString();
-			
-			  
-		  }*/
-		//System.out.println("Nkw"+Nkw);
+		valueAccordingtoLine.add(Nkw);
 		System.out.println("value of the keyword array"+valueAccordingtoLine);
-		return Nkw;
+		return valueAccordingtoLine;
 		
 		
 		
