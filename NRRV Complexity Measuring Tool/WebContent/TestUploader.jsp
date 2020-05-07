@@ -107,7 +107,7 @@
               </div>
               <div class="panel-body">
                     
-                <form> 
+                <form action="Uploader" method="post" enctype="multipart/form-data">
                    
                   
          <div class="row">
@@ -125,9 +125,10 @@
                      </div>
         
                        <label class="btn btn-primary" for="my-file-selector" id ="file">
-                        <input id="my-file-selector" type="file" style="display:none;">
-                              Select
-                        </label>                                        
+                        <input  type="file" name="file" multiple>
+                             
+                        </label>
+                        <input type="submit">                                        
                            </div>
                           </div>
                          </div>

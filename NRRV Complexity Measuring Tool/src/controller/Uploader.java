@@ -49,13 +49,13 @@ public class Uploader extends HttpServlet {
 				try {
 					int i = 0;
 					item.write(new File(
-							"C://Users/Ruvi/git/NRRV-Complexity-Measuring-Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files"
+							"C://Users/navod/git/repository/NRRV Complexity Measurig Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files/"
 									+ item.getName()));
 					list.add(item.getName());
 
 					temps.add(i, item.getString());
 					mc.getFileContent(readFileLineByLine.file(
-							"C://Users/Ruvi/git/NRRV-Complexity-Measuring-Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files"
+							"C://Users/navod/git/repository/NRRV Complexity Measurig Tool/NRRV Complexity Measuring Tool/WebContent/Uploaded Files/"
 									+ item.getName()));
 					/*
 					 * readFileLineByLine.
@@ -79,7 +79,7 @@ public class Uploader extends HttpServlet {
 		}
 
 		request.setAttribute("filenames", list);
-		request.getRequestDispatcher("Uploader.jsp?div=selected").forward(request, response);
+		request.getRequestDispatcher("AllFactor.jsp?div=selected").forward(request, response);
 
 		// System.out.println(temps.get(0));
 		// System.out.println("other file");
