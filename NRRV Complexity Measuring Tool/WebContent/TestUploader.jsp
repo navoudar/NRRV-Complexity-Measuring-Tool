@@ -6,7 +6,7 @@
 <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> Files</title>
+    <title>Upload Files</title>
    
   <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -18,8 +18,6 @@
     <script src="js/bootstrap.min.js" type="text/javascript"></script>
    
   
-    
-
 
 </head>
 <body>
@@ -58,9 +56,10 @@
               <a href="dash.jsp" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Keys
               </a>
+               <!---/collapsible side bar -->
                 <a href="#menu1" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                <span class="hidden-sm-down">Files Management </span>
+                <span class="hidden-sm-down">Upload Files</span>
                 </a>
                 
                  <a href="#" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
@@ -78,25 +77,35 @@
                   <span class="hidden-sm-down">Measuring Methods </span>
                  </a>
                
-                <!--/collapsible side bar starts-->
+
          <a href="#menu2" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                 <span class="hidden-sm-down">Inheritance</span> 
             </a>
       
-            <!---/collapsible side bar starts-->
+           
      <a href="#menu3" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
                 <span class="hidden-sm-down">Coupling</span>
+            </a>
+            
+                   
+     <a href="#menu3" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
+               <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                <span class="hidden-sm-down">Control Structures</span>
             </a>
        
              <!--/collapsible side bar end -->
                <a href="#" class="list-group-item" data-toggle="collapse" data-parent="#sidebar">
                <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
-                <span class="hidden-sm-down">Control Structures</span>  
+                <span class="hidden-sm-down">Final Output</span>  
                </a>
             </div>
-          </div>     
+          </div>   
+
+
+
+
         <div class="col-md-9">
             <!-- Website Overview -->
            
