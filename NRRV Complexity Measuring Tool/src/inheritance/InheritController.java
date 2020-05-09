@@ -23,6 +23,7 @@ public class InheritController {
 	
 	int Ci=0;
 	int Nin=0;
+	int Nindir=0;
 	int Win=1;
 
 	/*KeywordAndReservedWord keywordAndReservedWord;
@@ -32,7 +33,7 @@ public class InheritController {
 	
 	//com com;
 	IndirectInheritance IndirectInheritance;
-
+	DirectInheritance DirectInheritance;
 
 	public int ComplexityDuetoInheritance(String[] code) {
 			
@@ -42,6 +43,7 @@ public class InheritController {
 			ao = new Arithmatic_Operator();*/
 		
 			//com = new com();
+		DirectInheritance = new DirectInheritance();
 			IndirectInheritance = new IndirectInheritance();
 			
 			/*Nkw = keywordAndReservedWord.Complexity(code);
@@ -51,18 +53,20 @@ public class InheritController {
 			
 			//Nin = com.Complexity(code);
 			Nin = IndirectInheritance.Complexity(code);
-			String className = IndirectInheritance.ClassName(code);
+			Nindir = DirectInheritance.Complexity(code);
 			
+			System.out.println("Number of direct inheritance "+ Nin);
+			System.out.println("Number of indirect inheritance "+ Nindir);
 			/*System.out.println("Nkw in size Controller"+ Nkw);
 			System.out.println("Nid in size Controller"+ Nid);
 			System.out.println("Nop in size Controller"+ Nop);
 			return 0;*/
 			
-			System.out.println("class name:"+className+" number of direct inheritance:"+ Nin);
+			/*System.out.println("class name:"+className+" number of direct inheritance:"+ Nin);
 			if(Nin>1){
 				int Ninher=Nin-1;	
 				System.out.println("class name:"+className+" number of indirect inheritance:"+ Ninher);
-			}
+			}*/
 			return 0;
 			
 		}

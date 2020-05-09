@@ -7,7 +7,6 @@ import navod.SIzeController;
 import inheritance.DirectInheritance;
 import inheritance.IndirectInheritance;
 import inheritance.InheritController;
-import inheritance.Inheritance;
 import inheritance.com;
 import methods.Methodscontroller;
 
@@ -15,8 +14,7 @@ public class MainController {
 
 	String Content[];
 	SIzeController sIzeController = new SIzeController();
-	//IndirectInheritance inher = new IndirectInheritance();
-	InheritController inh = new InheritController();
+	InheritController inheritController = new InheritController();
 	//Methodscontroller methodscontroller = new Methodscontroller();
 	//com com = new com();
 	int Nkw=0;
@@ -29,7 +27,7 @@ public class MainController {
 		Nkw = sIzeController.ComplexityDuetoSize(content);
 		//Ninher = inher.Complexity(content);
 		//Ninher = com.Complexity(content);
-		Ninher = inh.ComplexityDuetoInheritance(content);
+		Ninher = inheritController.ComplexityDuetoInheritance(content);
 		//Nmethod = methodscontroller.ComplexityDuetoSize(content);
 		
 	}
