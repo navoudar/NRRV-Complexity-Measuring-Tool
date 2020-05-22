@@ -1,13 +1,5 @@
 package inheritance;
 
-import navod.Operator_Arithmatic;
-
-import java.util.ArrayList;
-
-import navod.Identifiers;
-import navod.KeywordAndReservedWord;
-import navod.Operators;
-
 public class InheritController {
 	/*int Cs = 0;
 	int Wkw = 1;
@@ -22,6 +14,7 @@ public class InheritController {
 	int Nsl = 0;*/
 	
 	int Ci=0;
+	int Wi=1;
 	int Nin=0;
 	int Nindir=0;
 	int Win=1;
@@ -32,8 +25,8 @@ public class InheritController {
 	Arithmatic_Operator ao ;*/
 	
 	//com com;
-	IndirectInheritance IndirectInheritance;
 	DirectInheritance DirectInheritance;
+	IndirectInheritance IndirectInheritance;
 
 	public int ComplexityDuetoInheritance(String[] code) {
 			
@@ -52,11 +45,15 @@ public class InheritController {
 			Nop = ao.Complexity(code);*/
 			
 			//Nin = com.Complexity(code);
-			Nin = IndirectInheritance.Complexity(code);
 			Nindir = DirectInheritance.Complexity(code);
+			Nin = IndirectInheritance.Complexity(code);
 			
+			int total=Nin+Nindir;
+			Ci=total;
 			System.out.println("Number of direct inheritance "+ Nin);
 			System.out.println("Number of indirect inheritance "+ Nindir);
+			System.out.println("Total inheritance "+total);
+			System.out.println("Ci "+Ci);
 			/*System.out.println("Nkw in size Controller"+ Nkw);
 			System.out.println("Nid in size Controller"+ Nid);
 			System.out.println("Nop in size Controller"+ Nop);

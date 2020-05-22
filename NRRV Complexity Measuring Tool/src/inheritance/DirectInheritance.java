@@ -18,6 +18,7 @@ public class DirectInheritance {
 	private ArrayList<String> inherit = new ArrayList<>();
 	private ArrayList<String> className = new ArrayList<>();
 	private ArrayList<Integer> inher = new ArrayList<>();
+	List<Integer> valueAccordingtoLine = new ArrayList<>();
 	int Nin = 0 ;
 	int tempNin = 0 ;
 	
@@ -34,21 +35,12 @@ public class DirectInheritance {
 	    	int length = s.length();
 		
         
-	    	 if(line.contains("class"))
-	            {
-	                int j = 0;
-	                while(!line.split(" ")[j].equalsIgnoreCase("class"))
-	                {
-	                    j++;
-	                    className.add(line.split(" ")[j+1]);
-	                   System.out.println("class name:"+className);           
-	//}
-	   // System.out.println("number of inheritance"+ total);
 	    
 	    //Java	 
 	    if(isJava) {
 	    	 if(line.contains("extends"))
 	            {
+	    		 
 	                int i = 0;
 	                while(!line.split(" ")[i].equalsIgnoreCase("extends"))
 	                {
@@ -61,8 +53,9 @@ public class DirectInheritance {
 	                    for(int a=0;a<inheritance.size();a++) {
 	                    	System.out.println("Parent class array:"+inheritance);
 	                    System.out.println("parent class:"+inheritance.get(a));
+	                    
 	                    }
-	                    tempNin +=1;
+	                    //tempNin +=1;
 	                }
 	               
 	                inherit.add(line.split(" ")[i-1]);  //word before 'extends' keyword 
@@ -70,27 +63,63 @@ public class DirectInheritance {
 	                	System.out.println("Child class array:"+inherit);
 	                System.out.println("child class:"+inherit.get(b));
 	                }
-	                //total = total + (inheritance.indexOf(line.split(" ")[i-1])+1);
+	                Nin = Nin + (inheritance.indexOf(line.split(" ")[i-1])+1);
 	                tempNin  += 1;
 	            }
-	    	 /*else
-	            {
-	            	System.out.println("class name:"+inheritance.get(1));
-	            }*/
-	            inher.add(tempNin);
+	    	 
+	    }
+	    //C++
+        else
+        {
+            if(line.matches(".*\\bclass\\b(?=.*:).*")) //Contains character ':' somewhere after keyword 'class'
+            {
+            	
+                int i = 0;
+                while(!line.split(" ")[i].equalsIgnoreCase(":"))
+                {
+                    i++;
+                }
+                int y = i;               
+                
+                if(line.split(" ")[i+1].matches(".*\\b(public|private|protected)\\b.*"))    //If word after ':' is private/public/protected, then skip it
+                {
+                    i++;
+                }
+
+                if(!inheritance.contains(line.split(" ")[i+1]))
+                {
+                    inheritance.add(line.split(" ")[i+1]);  //word after ':'
+                }
+                else    //If not a chain inheritance
+                {
+                    if(inheritance.indexOf(line.split(" ")[i+1]) == 0)
+                    {
+                        inheritance.remove(1);
+                    }
+                }
+                
+                inheritance.add(line.split(" ")[y-1]);  //word before ':'    
+                
+
+                Nin = Nin + (inheritance.indexOf(line.split(" ")[y-1])+1);
+                tempNin  += 1;
+            }
+            
+        }
+	    	 valueAccordingtoLine.add(tempNin);
 	            Nin += tempNin;
-				tempNin = 0;
-	            }
-	                if(Nin<=1) {
+				//tempNin = 0;
+	            //}
+	               /* if(Nin<=1) {
 	                	System.out.println("class name:"+line.split(" ")[j+1]+ " no of direct inheritance:"+Nin);
 	                	System.out.println("class name:"+line.split(" ")[j+1]+ " no of indirect inheritance:"+0);
-	                }
+	                }*/
 	                
 	            
-	            }
-	    }
+	            
+	    //}
 		}
-		System.out.println("value of the direct inheritance array"+inher);
+		System.out.println("value of the direct inheritance array"+ valueAccordingtoLine);
 	    return Nin;
 	    
 	    }	
